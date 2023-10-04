@@ -33,6 +33,7 @@ fit.s <-rstan::stan("model.stan",data=list(
   sppd=as.matrix(spp.d)
 ), chains=8L)
 
+# for table:
 
 t <- sum(rstan::get_elapsed_time(fit.s)[,"sample"])
 m <- rstan::summary(fit.s)$summary
@@ -48,3 +49,9 @@ print(round(m["sigma","n_eff"]/t,1))
 
 print(round(min(m[bet.eta,"n_eff"])))
 print(round(min(m[bet.eta,"n_eff"])/t,1))
+
+print(round(min(m[bet.g,"n_eff"])))
+print(round(min(m[bet.g,"n_eff"])/t,1))
+
+print(round(min(m[bb,"n_eff"])))
+print(round(min(m[bb,"n_eff"])/t,1))
