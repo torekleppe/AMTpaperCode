@@ -35,8 +35,8 @@ print(round(m.1["sigma","sd"],2))
 print(round(m.0["sigma","n_eff"]))
 print(round(m.1["sigma","n_eff"]))
 
-print(round(m.0["sigma","n_eff"]/t.0),1)
-print(round(m.1["sigma","n_eff"]/t.1),1)
+print(round(m.0["sigma","n_eff"]/t.0,1))
+print(round(m.1["sigma","n_eff"]/t.1,1))
 
 print(round(min(m.0[zt,"n_eff"])))
 print(round(min(m.1[zt,"n_eff"])))
